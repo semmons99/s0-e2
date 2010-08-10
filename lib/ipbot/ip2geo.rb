@@ -10,5 +10,6 @@ module IPBOT
 
     info = doc.elements.to_a('/Response/*').map{|e| "#{e.name}: #{e.text}" }
     info << "map: http://maps.google.com/maps?q=#{lat},+#{lng}+(#{ip})&iwloc=A&hl=en"
+    info
   end
 end

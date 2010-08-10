@@ -7,7 +7,8 @@ task :ip2geo do
   ip = ENV["IP"]
 
   require 'lib/ipbot/ip2geo'
-  puts IPBOT.ip2geo(ip)
+  require 'pp'
+  pp IPBOT.ip2geo(ip)
 end
 
 desc "startup bot, requires CHANNEL=, optional SERVER= PORT= PASSWORD="
