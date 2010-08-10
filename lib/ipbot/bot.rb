@@ -6,7 +6,7 @@ module IPBOT
     bot = Cinch.setup do
       server   _server
       port     _port
-      nick     "ipbot"
+      nick     "ip2geo-bot"
       channels ["#{_channel} #{_password}"]
     end
 
