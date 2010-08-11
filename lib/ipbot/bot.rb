@@ -10,6 +10,10 @@ module IPBOT
       channels ["#{_channel} #{_password}"]
     end
 
+    bot.plugin "ip2geo help" do |m|
+      m.reply "#{m.nick}: <!ip2geo (ip address)> gives a list of geographic attributes associated with the ip address"
+    end
+
     bot.plugin "ip2geo :ip" do |m|
       m.reply "#{m.nick}: #{IPBOT.ip2geo(m.args[:ip]).join(', ')}"
     end
