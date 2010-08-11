@@ -15,7 +15,7 @@ module IPBOT
     end
 
     bot.plugin "ip2geo :ip" do |m|
-      m.reply "#{m.nick}: #{IPBOT.ip2geo(m.args[:ip]).join(', ')}"
+      m.reply "#{m.nick}: #{IPBOT.ip2geo(m.args[:ip]).join(', ')}" unless m.args[:ip] == 'help'
     end
 
     bot.run
